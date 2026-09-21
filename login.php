@@ -98,7 +98,7 @@ require_once __DIR__ . '/includes/header.php';
                             <div class="input-group">
                                 <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
                                 <input type="email" class="form-control" id="email" name="email" 
-                                       value="<?= e($email) ?>" placeholder="e.g. you@butwal-kalika.edu.np" required autofocus>
+                                       value="<?= e($email) ?>" placeholder="e.g. elonmusk@butwalkalika.edu.np" required autofocus>
                             </div>
                             <div class="form-text small text-muted">Use your college .edu / .edu.np email.</div>
                         </div>

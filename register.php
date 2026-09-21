@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Please enter a valid email address.';
     } else {
         // Only college emails allowed: must end with .edu or .edu.np
-        // Example: ramesh@butwal-kalika.edu.np, sita@anycollege.edu
+        // Example: elonmusk@butwalkalika.edu.np, student@anycollege.edu
         $emailLower = strtolower($email);
         $endsWithEdu = substr($emailLower, -4) === '.edu';
         $endsWithEduNp = substr($emailLower, -7) === '.edu.np';
@@ -145,7 +145,7 @@ require_once __DIR__ . '/includes/header.php';
                             <div class="input-group">
                                 <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
                                 <input type="text" class="form-control" id="name" name="name" 
-                                       value="<?= e($name) ?>" placeholder="e.g. Ramesh Thapa" required>
+                                       value="<?= e($name) ?>" placeholder="e.g. Elon Musk" required>
                             </div>
                         </div>
 
@@ -154,7 +154,7 @@ require_once __DIR__ . '/includes/header.php';
                             <div class="input-group">
                                 <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
                                 <input type="email" class="form-control" id="email" name="email" 
-                                       value="<?= e($email) ?>" placeholder="e.g. ramesh@butwal-kalika.edu.np" required>
+                                       value="<?= e($email) ?>" placeholder="e.g. elonmusk@butwalkalika.edu.np" required>
                             </div>
                             <div class="form-text small text-muted">Only .edu or .edu.np emails allowed.</div>
                         </div>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Student Voice - College Complaint Management System
- * Public Website Showcase & Grievance Portal Gateway
+ * Public Website Showcase & Complaint Portal Gateway
  * 
  * Concept: The public-facing institutional website that introduces the
  * "Student Voice" platform, explains its purpose, provides public tracking,
@@ -43,7 +43,7 @@ if (!empty($searchQuery)) {
 // Fetch active categories
 $categories = $pdo->query("SELECT name, description FROM categories ORDER BY name ASC LIMIT 6")->fetchAll();
 
-$pageTitle = APP_NAME . ' | Official College Grievance Portal';
+$pageTitle = APP_NAME . ' | Official College Complaint Portal';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
@@ -62,14 +62,11 @@ require_once __DIR__ . '/includes/header.php';
                 </p>
                 <div class="d-flex flex-wrap gap-3">
                     <a href="register.php" class="btn btn-primary btn-lg px-4 shadow-sm">
-                        <i class="bi bi-pencil-square me-2"></i> Lodge a Grievance
-                    </a>
-                    <a href="#portals-section" class="btn btn-outline-light btn-lg px-4">
-                        <i class="bi bi-door-open me-2"></i> Enter Portals
+                        <i class="bi bi-pencil-square me-2"></i> Submit a Complaint
                     </a>
                     <a href="#track-section"
-                        class="btn btn-link text-white text-decoration-none d-flex align-items-center">
-                        <i class="bi bi-search me-1"></i> Track Reference
+                        class="btn btn-outline-light btn-lg px-4">
+                        <i class="bi bi-search me-1"></i> Track Complaint
                     </a>
                 </div>
             </div>
@@ -87,11 +84,10 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container py-3">
         <div class="text-center mb-5">
             <span class="badge bg-light text-primary border border-primary-subtle px-3 py-2 fw-semibold text-uppercase">
-                Select Your Access Gateway
+                Choose Your Portal
             </span>
             <h2 class="fw-bold mt-2" style="color: var(--app-primary);">Access the Student Voice Portals</h2>
-            <p class="text-muted col-md-6 mx-auto">Choose your respective role to proceed into the secured application
-                portal.</p>
+            <p class="text-muted col-md-6 mx-auto">Access the Student Voice platform based on your role.</p>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -104,12 +100,11 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h4 class="fw-bold text-dark mb-2">Student Portal</h4>
                     <p class="text-muted small mb-4 flex-grow-1">
-                        Lodge new complaints with photo evidence, monitor status in real-time, view official admin
-                        remarks, and edit pending submissions.
+                        Submit complaints, attach evidence, track updates, and view responses from college administrators.
                     </p>
                     <div class="d-grid gap-2">
                         <a href="login.php" class="btn btn-primary py-2">
-                            <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Student Portal
+                            <i class="bi bi-box-arrow-in-right me-1"></i> Sign In as Student
                         </a>
                         <a href="register.php" class="btn btn-outline-secondary py-2 small">
                             <i class="bi bi-person-plus me-1"></i> Create Student Account
@@ -127,15 +122,14 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h4 class="fw-bold text-dark mb-2">Administrator Portal</h4>
                     <p class="text-muted small mb-4 flex-grow-1">
-                        Authorized departmental staff and administrators can manage grievance queues, filter complaints,
-                        update statuses, and log resolution remarks.
+                        Review and manage student complaints, update statuses, and record resolutions.
                     </p>
                     <div class="d-grid gap-2 mt-auto">
                         <a href="login.php" class="btn btn-navy py-2">
-                            <i class="bi bi-shield-check me-1"></i> Admin Portal Login
+                            <i class="bi bi-shield-check me-1"></i> Sign In as Administrator
                         </a>
                         <span class="text-muted small py-2">
-                            <i class="bi bi-info-circle me-1"></i> Restricted to authorized faculty and IT coordinators
+                            <i class="bi bi-lock me-1"></i> Authorized college staff only
                         </span>
                     </div>
                 </div>
@@ -156,15 +150,11 @@ require_once __DIR__ . '/includes/header.php';
             <div class="col-lg-6">
                 <span class="badge bg-primary-subtle text-primary px-3 py-2 fw-semibold text-uppercase">About The
                     Platform</span>
-                <h2 class="fw-bold mt-2 mb-3" style="color: var(--app-primary);">Transforming College Grievance
-                    Redressal</h2>
+                <h2 class="fw-bold mt-2 mb-3" style="color: var(--app-primary);">A Better Way to Handle Campus Complaints</h2>
                 <p class="text-muted mb-4" style="line-height: 1.7;">
                     <strong>Student Voice</strong> is developed under the <strong>Tribhuvan University BCA
                         program</strong>
-                    to replace outdated paper complaints with an accountable digital process. By digitizing the
-                    workflow, students gain
-                    total transparency over their issues while college administrators receive organized data to resolve
-                    campus bottlenecks promptly.
+                    to make college complaints easier to submit and manage. It provides a digital alternative to paper-based complaints and traditional complaint management systems, allowing students to submit and track their complaints while helping administrators organize, review, and respond to issues efficiently.
                 </p>
 
                 <div class="row g-3">
@@ -173,8 +163,7 @@ require_once __DIR__ . '/includes/header.php';
                             <i class="bi bi-camera-fill text-primary fs-4 me-3"></i>
                             <div>
                                 <h6 class="fw-bold mb-1">Visual Evidence</h6>
-                                <p class="text-muted small mb-0">Upload photos of broken equipment, lab errors, or water
-                                    leakages.</p>
+                                <p class="text-muted small mb-0">Upload photos or other evidence to help explain your complaint clearly.</p>
                             </div>
                         </div>
                     </div>
@@ -183,8 +172,7 @@ require_once __DIR__ . '/includes/header.php';
                             <i class="bi bi-clock-history text-primary fs-4 me-3"></i>
                             <div>
                                 <h6 class="fw-bold mb-1">Activity Timeline</h6>
-                                <p class="text-muted small mb-0">Track each step from review to technician dispatch and
-                                    final fix.</p>
+                                <p class="text-muted small mb-0">See updates and track every step of your complaint until it is resolved.</p>
                             </div>
                         </div>
                     </div>
@@ -258,7 +246,7 @@ require_once __DIR__ . '/includes/header.php';
                                         </div>
                                     <?php else: ?>
                                         <div class="p-2 bg-light rounded small text-muted">
-                                            <i class="bi bi-hourglass-split me-1"></i> Grievance is currently awaiting
+                                            <i class="bi bi-hourglass-split me-1"></i> Complaint is currently awaiting
                                             administrative review.
                                         </div>
                                     <?php endif; ?>
@@ -298,7 +286,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <div class="text-center mt-5">
             <a href="register.php" class="btn btn-primary px-4 py-2">
-                <i class="bi bi-arrow-right-circle me-1"></i> Register to Submit a Grievance
+                <i class="bi bi-arrow-right-circle me-1"></i> Register to Submit a Complaint
             </a>
         </div>
     </div>

@@ -94,7 +94,7 @@ INSERT INTO `categories` (`id`, `name`, `description`) VALUES
 -- Default Demo Accounts (Passwords: 'admin123' and 'student123')
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `phone`) VALUES
 (1, 'System Administrator', 'admin@college.edu', '$2y$10$jNNNmSKxj9CuSJum6vlPtO3pXVOCh6BvtkoRPQLymOVE/sUFNtzHu', 'admin', '9800000000'),
-(2, 'Suman Sharma (Student)', 'student@college.edu', '$2y$10$reh7TRP4jwg21Vd/CQZRKO0rzIeKkahGuX9L74tFCXTPIa8fX8vR6', 'student', '9811111111');
+(2, 'Sujan Adhikari', 'student@college.edu', '$2y$10$reh7TRP4jwg21Vd/CQZRKO0rzIeKkahGuX9L74tFCXTPIa8fX8vR6', 'student', '9811111111');
 
 -- Sample Complaints for Testing and Demonstrating Dashboards
 INSERT INTO `complaints` (`id`, `complaint_number`, `user_id`, `category_id`, `title`, `description`, `image`, `status`, `admin_remark`, `created_at`) VALUES
